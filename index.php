@@ -1,25 +1,22 @@
 <?php
 
+include_once __DIR__ .'/Models/Production.php';
 
-
-class Production { //dichiaro la classe Production con tre proprietà pubbliche(quindi sono accessibili dall'esterno)
-    public $title;
-    public $language;
-    public $vote;
-
-    //dichiaro la funzione costruttore che prende tre parametri in ingresso che vengono specificati per come devono essere
-    function __construct(string $title,string $language,int $vote) {
-        //con il this. mi riferisco alla singola istanza, quindi la struttura è quella sopra e quando costruisco un nuovo oggetto dirò, di questo oggetto assegna questi parametri a queste proprietà
-        $this->title = $title;
-        $this->language = $language;
-        $this->vote = $vote;
-    }
-}
 
 //definisco una variabile first a cui assegno la nuova istanza con (new) della classe Production a cui passo i 3 parametri corretti
 $first = new Production("Anto","Ita",10);
+$second = new Production("Fra","Eng",5);
+$third = new Production("Ger","Fra",50);
+//stampo in pagina i due nuovi oggetti costruiti seguendo la classe Production
+var_dump($first,$second,$third);
 
-var_dump($first);
+//stampo in pagina il titolo dell'oggetto $first tramite la funzione get_Title
+var_dump($first->get_Title());
+
+var_dump($second->get_Language());
+
+var_dump($third->get_Vote());
+
 ?>
 
 
