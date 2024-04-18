@@ -1,9 +1,12 @@
 <?php
 
 include_once __DIR__ .'/Models/Production.php';
+include_once __DIR__ .'/Models/Genre.php';
 include_once __DIR__ .'/db.php';
 
-var_dump($products);
+
+//var_dump($products);      //nell'array $products ci sono contenuti la lista di oggetti prodotti
+
 /*
 //definisco una variabile first a cui assegno la nuova istanza con (new) della classe Production a cui passo i 3 parametri corretti
 $first = new Production("Anto","Ita",10);
@@ -18,6 +21,12 @@ var_dump($first->get_Title());
 var_dump($second->get_Language());
 
 var_dump($third->get_Vote());
+
+
+costruisco per vedere se è collegato un $genre_1
+$genre_1= new Genre("Horror" , "ABC");
+var_dump($genre_1->get_Description());
+
 */
 ?>
 
@@ -34,11 +43,15 @@ var_dump($third->get_Vote());
     <title>PHP OOP</title>
 </head>
 <body>
-    <div id="app">
-        {{message}}
-    </div>
-
     
+    <?php
+        foreach($products as $product)
+        var_dump($product);
+        echo "<div>" . $product->genre->get_Name()  .  "</div>";
+    ?>
+
+
+
     <!--Cdn axios-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--Cdn Vue-->
