@@ -1,8 +1,10 @@
 <?php
 
 include_once __DIR__ .'/Models/Production.php';
+include_once __DIR__ .'/db.php';
 
-
+var_dump($products);
+/*
 //definisco una variabile first a cui assegno la nuova istanza con (new) della classe Production a cui passo i 3 parametri corretti
 $first = new Production("Anto","Ita",10);
 $second = new Production("Fra","Eng",5);
@@ -16,7 +18,7 @@ var_dump($first->get_Title());
 var_dump($second->get_Language());
 
 var_dump($third->get_Vote());
-
+*/
 ?>
 
 

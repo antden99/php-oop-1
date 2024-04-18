@@ -31,11 +31,4 @@ class Production { //dichiaro la classe Production con tre proprietà pubbliche(
     }
 }
 
-
-
-
-
-
-
-
 ?>
