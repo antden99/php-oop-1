@@ -44,11 +44,26 @@ var_dump($genre_1->get_Description());
 </head>
 <body>
     
-    <?php
-        foreach($products as $product)
-        var_dump($product);
-        echo "<div>" . $product->genre->get_Name()  .  "</div>";
-    ?>
+    <div id="app" class="vh-100 d-flex align-items-center bg-dark">
+    <div class="container text-center text-white">
+        <h1>My Products List</h1>
+        <div class="row">
+            <?php foreach($products as $product): ?>  <!--apro un foreach -->
+                <div class="col">
+                    <div class="card rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Title:<?php echo $product->get_Title() ?></h5>
+                            <div>Language:<?php echo $product->get_Language() ?></div>
+                            <div>Vote:<?php echo $product->get_Vote() ?></div>
+                            <div>Nome Genere:<?php echo $product->genre->get_Name() ?></div>
+                            <div>Descrizione:<?php echo $product->genre->get_Description() ?></div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>  <!--chiudo il foreach-->
+        </div>
+    </div>
+    </div>
 
 
 
