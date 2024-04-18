@@ -1,8 +1,25 @@
 <?php
 
-echo "ciao Anto";
 
 
+class Production { //dichiaro la classe Production con tre proprietà pubbliche(quindi sono accessibili dall'esterno)
+    public $title;
+    public $language;
+    public $vote;
+
+    //dichiaro la funzione costruttore che prende tre parametri in ingresso che vengono specificati per come devono essere
+    function __construct(string $title,string $language,int $vote) {
+        //con il this. mi riferisco alla singola istanza, quindi la struttura è quella sopra e quando costruisco un nuovo oggetto dirò, di questo oggetto assegna questi parametri a queste proprietà
+        $this->title = $title;
+        $this->language = $language;
+        $this->vote = $vote;
+    }
+}
+
+//definisco una variabile first a cui assegno la nuova istanza con (new) della classe Production a cui passo i 3 parametri corretti
+$first = new Production("Anto","Ita",10);
+
+var_dump($first);
 ?>
 
 
@@ -22,7 +39,7 @@ echo "ciao Anto";
         {{message}}
     </div>
 
-
+    
     <!--Cdn axios-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--Cdn Vue-->
