@@ -21,4 +21,13 @@ $movieList = [
     new Movie("American Pie 2", "en", 10, new Genre("bello", "film divertente,esilarante"), "15k", "5"),
 
 ];
+
+$tvSeriesList = [
+    new TvSerie("Prima produzione","it",10,new Genre("Produzione 1","Fantastica"),5),
+    new TvSerie("Seconda produzione","en",10,new Genre("Produzione 2","Bella"),4),
+    new TvSerie("Terza produzione","jp",10,new Genre("Produzione 3","Fantastica"),8),
+    new TvSerie("Quarta produzione","jp",10,new Genre("Produzione 4","Entusiasmante"),1),
+    new TvSerie("Quinta produzione","it",10,new Genre("Produzione 5","Famosa"),4),
+    new TvSerie("Sesta produzione","en",10,new Genre("Produzione 6","Fantastica"),3),
+];
 //var_dump($products);

@@ -47,7 +47,7 @@ var_dump($genre_1->get_Description());
 
     <div id="app" class="vh-100 d-flex align-items-center bg-dark">
         <div class="container text-center text-white">
-            <h1>My Products List</h1>
+            <h2>My Products List</h2>
             <div class="row">
                 <?php foreach ($products as $product) : ?> <!--apro un foreach -->
                     <div class="col">
@@ -64,7 +64,7 @@ var_dump($genre_1->get_Description());
                 <?php endforeach; ?> <!--chiudo il foreach-->
             </div>
 
-            <h1>My Movie List</h1>
+            <h2>My Movie List</h2>
             <div class="row">
                 <?php foreach ($movieList as $movie) : ?> <!--apro un foreach -->
                     <div class="col">
@@ -77,6 +77,24 @@ var_dump($genre_1->get_Description());
                                 <div>Genre:<?php echo $movie->genre->get_Description() ?></div>
                                 <div>Profit:<?php echo $movie->getProfit() ?></div>
                                 <div>Durata:<?php echo $movie->getDuration() ?>minuti</div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?> <!--chiudo il foreach-->
+            </div>
+
+            <h2>My Tv Serie List</h2>
+            <div class="row">
+                <?php foreach ($tvSeriesList as $serie) : ?> <!--apro un foreach -->
+                    <div class="col">
+                        <div class="card rounded">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $serie->get_Title() ?></h5>
+                                <div>Language:<?php echo $serie->get_Language() ?></div>
+                                <div>Vote:<?php echo $serie->get_Vote() ?></div>
+                                <div>Genre:<?php echo $serie->genre->get_Name() ?></div>
+                                <div>Genre:<?php echo $serie->genre->get_Description() ?></div>
+                                <div>Profit:<?php echo $serie->getNumberSeasons() ?></div>
                             </div>
                         </div>
                     </div>
