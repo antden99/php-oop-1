@@ -47,8 +47,8 @@ var_dump($genre_1->get_Description());
 
     <div id="app" class="vh-100 d-flex align-items-center bg-dark">
         <div class="container text-center text-white">
-            <h2>My Products List</h2>
             <div class="row">
+                <h2>My Products List</h2>
                 <?php foreach ($products as $product) : ?> <!--apro un foreach -->
                     <div class="col">
                         <div class="card rounded">
@@ -56,16 +56,19 @@ var_dump($genre_1->get_Description());
                                 <h5 class="card-title"><?php echo $product->get_Title() ?></h5>
                                 <div>Language:<?php echo $product->get_Language() ?></div>
                                 <div>Vote:<?php echo $product->get_Vote() ?></div>
-                                <div>Nome Genere:<?php echo $product->genre->get_Name() ?></div>
-                                <div>Descrizione:<?php echo $product->genre->get_Description() ?></div>
+                                <div>Genre:
+                                    <?php foreach ($product->genre as $genre) : ?>
+                                        <div><?php echo $genre->get_Name() . ' ' . $genre->get_Description() ?></div>
+                                    <?php endforeach; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?> <!--chiudo il foreach-->
+                <?php endforeach; ?>
             </div>
 
-            <h2>My Movie List</h2>
             <div class="row">
+                <h2>My Movie List</h2>
                 <?php foreach ($movieList as $movie) : ?> <!--apro un foreach -->
                     <div class="col">
                         <div class="card rounded">
@@ -73,18 +76,21 @@ var_dump($genre_1->get_Description());
                                 <h5 class="card-title"><?php echo $movie->get_Title() ?></h5>
                                 <div>Language:<?php echo $movie->get_Language() ?></div>
                                 <div>Vote:<?php echo $movie->get_Vote() ?></div>
-                                <div>Genre:<?php echo $movie->genre->get_Name() ?></div>
-                                <div>Genre:<?php echo $movie->genre->get_Description() ?></div>
-                                <div>Profit:<?php echo $movie->getProfit() ?></div>
-                                <div>Durata:<?php echo $movie->getDuration() ?>minuti</div>
+                                <div>Genre:
+                                    <?php foreach ($movie->genre as $genre) : ?>
+                                        <div><?php echo $genre->get_Name() . ' ' . $genre->get_Description() ?></div>
+                                    <?php endforeach; ?>
+                                </div>
+                                <div>Profit: <?php echo $movie->getProfit() ?></div>
+                                <div>Duration: <?php echo $movie->getDuration() ?></div>
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?> <!--chiudo il foreach-->
+                <?php endforeach; ?>
             </div>
 
-            <h2>My Tv Serie List</h2>
             <div class="row">
+                <h2>My Tv Serie List</h2>
                 <?php foreach ($tvSeriesList as $serie) : ?> <!--apro un foreach -->
                     <div class="col">
                         <div class="card rounded">
@@ -92,13 +98,17 @@ var_dump($genre_1->get_Description());
                                 <h5 class="card-title"><?php echo $serie->get_Title() ?></h5>
                                 <div>Language:<?php echo $serie->get_Language() ?></div>
                                 <div>Vote:<?php echo $serie->get_Vote() ?></div>
-                                <div>Genre:<?php echo $serie->genre->get_Name() ?></div>
-                                <div>Genre:<?php echo $serie->genre->get_Description() ?></div>
-                                <div>Profit:<?php echo $serie->getNumberSeasons() ?></div>
+                                <div>Genre:
+                                    <?php foreach ($serie->genre as $genre) : ?>
+                                        <div><?php echo $genre->get_Name() . ' ' . $genre->get_Description() ?></div>
+                                    <?php endforeach; ?>
+                                </div>
+                                <div>Numero Stagioni:<?php echo $serie->getNumberSeasons() ?></div>
+
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?> <!--chiudo il foreach-->
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

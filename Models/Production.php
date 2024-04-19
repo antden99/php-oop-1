@@ -10,7 +10,7 @@ class Production
     public $vote;
     public $genre;
     //dichiaro la funzione costruttore che prende tre parametri in ingresso che vengono specificati per come devono essere
-    function __construct(string $title, string $language, int $vote, Genre $genre)
+    function __construct(string $title, string $language, int $vote, array $genre)
     {
         //con il this. mi riferisco alla singola istanza, quindi la struttura è quella sopra e quando costruisco un nuovo oggetto dirò, di questo oggetto assegna questi parametri a queste proprietà
         $this->title = $title;
