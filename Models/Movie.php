@@ -41,13 +41,13 @@ class Movie extends Production
     }
 }
 
-$movie = new Movie("American Pie", "en", 10, new Genre("bello", "film divertente"), "10k", "10m");
+//$movie = new Movie("American Pie", "en", 10, new Genre("bello", "film divertente"), "10k", "10m");
 
-var_dump(($movie));
+//var_dump(($movie));
 
-$production = new Production("anto", "anto", 5, new Genre("ANTO", "ANTO"));
+//$production = new Production("anto", "anto", 5, new Genre("ANTO", "ANTO"));
 
-var_dump($production);
+//var_dump($production);
 ?>
 
 

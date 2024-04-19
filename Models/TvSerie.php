@@ -1,8 +1,13 @@
 <?php
-class TvSerie {
+include_once __DIR__ . '/Production.php';
+include_once __DIR__ . '/Genre.php';
+
+class TvSerie extends Production{
     public $numberSeasons;
 
-    public function __construct(int $numberSeasons,) {
+    public function __construct(string $title, string $language, int $vote, Genre $genre,int $numberSeasons) {
+        parent::__construct($title,$language,$vote,$genre);
+
         $this->numberSeasons = $numberSeasons;
        
     }
@@ -20,8 +25,7 @@ class TvSerie {
     
 }
 
-$numberSeason = new TvSerie(10);
-
-var_dump($numberSeason);
+//$numberSeason = new TvSerie("Prima produzione","it",10,new Genre("Produzione 1","Fantastica"),5);
+//var_dump($numberSeason);
 
 ?>
