@@ -53,11 +53,30 @@ var_dump($genre_1->get_Description());
                     <div class="col">
                         <div class="card rounded">
                             <div class="card-body">
-                                <h5 class="card-title">Title:<?php echo $product->get_Title() ?></h5>
+                                <h5 class="card-title"><?php echo $product->get_Title() ?></h5>
                                 <div>Language:<?php echo $product->get_Language() ?></div>
                                 <div>Vote:<?php echo $product->get_Vote() ?></div>
                                 <div>Nome Genere:<?php echo $product->genre->get_Name() ?></div>
                                 <div>Descrizione:<?php echo $product->genre->get_Description() ?></div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?> <!--chiudo il foreach-->
+            </div>
+
+            <h1>My Movie List</h1>
+            <div class="row">
+                <?php foreach ($movieList as $movie) : ?> <!--apro un foreach -->
+                    <div class="col">
+                        <div class="card rounded">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $movie->get_Title() ?></h5>
+                                <div>Language:<?php echo $movie->get_Language() ?></div>
+                                <div>Vote:<?php echo $movie->get_Vote() ?></div>
+                                <div>Genre:<?php echo $movie->genre->get_Name() ?></div>
+                                <div>Genre:<?php echo $movie->genre->get_Description() ?></div>
+                                <div>Profit:<?php echo $movie->getProfit() ?></div>
+                                <div>Durata:<?php echo $movie->getDuration() ?>minuti</div>
                             </div>
                         </div>
                     </div>
